@@ -124,7 +124,8 @@
   
    <input size="16"  type="text" class="date form-control input-sm "name="fechainicio" value="" id="fechainicio" readonly>
          
-             
+         
+   
               </div>  
  <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 </div>

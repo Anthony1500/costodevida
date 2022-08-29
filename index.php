@@ -2,10 +2,7 @@
 <html>
 <head>
 <title>Cargar Ficheros</title>
-<?php
-    header("Cache-Control: no-cache, must-revalidate");
-    header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-?>
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 
