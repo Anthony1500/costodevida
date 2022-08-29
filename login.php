@@ -88,7 +88,7 @@
             }  
             $row = mysqli_fetch_assoc($result) ;
             if( isset($row['usuario']) == null and isset($row['contraseña']) == null ){
-				echo '<script language="javascript">alert("Usuario y Clave Incorrecto");</script>';
+				echo '<script language="javascript">alert("Usuario o Clave Incorrecto");</script>';
                 $mensaje ="Las credenciales ingresadas no coinciden con los datos ya existentes";
 				
             } 
