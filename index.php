@@ -17,8 +17,8 @@
     <!-- Bootstra Datepicker CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
     
-    <script type="text/javascript">
-        function GetDateTime() {
+    <script type="text/javascript"> 
+        function GetDateTime() {// obtiene la fecha actual y carga a campo de texto
             var currentTime = new Date()
             var month = currentTime.getMonth() + 1
             var day = currentTime.getDate()
@@ -32,7 +32,7 @@
            
             document.getElementById('date').value = year + "-" + month + "-" + day ;
         }  
-        function isNumberKey(evt)
+        function isNumberKey(evt)// permite solo  ingresar numeros no letras
 			{
 				var charCode = (evt.which) ? evt.which : evt.keyCode;
 				if (charCode != 46 && charCode > 31 
@@ -41,14 +41,18 @@
 				return true;
 			}  
       
-      function reporte() {
+      function reporte() {// permite redireccionar a la pantalla de reportes 
         window.location.href='reportes.php';
     
    
     
 	
 	}
-  
+
+  function salir() {// permite salir del sistema
+        window.location.href='login.php';
+    
+	}
 
     </script>
     
@@ -75,8 +79,12 @@
 <div role="navigation" class="navbar navbar-inverse navbar-static-top">
   <div class="container">
     <div class="navbar-header">
+
+    
      
       <a  class="navbar-brand">PROYECTO</a> </div>
+      <button style="transform: translate(1400%, 30%);" class="btn btn-warning" onclick="salir()" type="sumit">Salir</button>
+    
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
       </ul>
@@ -85,7 +93,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container">   <!-- formulario de gastos y diseño  -->
   <div class="row">
     <h4>Ingreso de Gastos</h4>
     <hr style="margin-top:5px;margin-bottom: 5px;">
@@ -102,9 +110,9 @@
 <h5><b>Fecha</b></h5>
 <div class="input-group" >
    <div class="input-group-addon" >
-	<span class="glyphicon glyphicon-calendar"></span> 
+	<span class="glyphicon glyphicon-calendar"></span> <!-- diseño del icono  -->
    </div>
-  
+<!--  el campo de texto fecha  -->
    <input size="16"  type="text" class="date form-control input-sm " name="date" value="" id="date" readonly>
          
              
@@ -120,7 +128,7 @@
 	<span class="glyphicon glyphicon-list-alt"></span> 
    </div>
   
-   
+   <!--declaracion del combo box de tipo de gastos -->
    <select  id="tipo_gastos" class="gasto form-control input-sm " name="tipo_gastos"  readonly>
    
     <option value="Alimentación">Alimentación</option>
@@ -137,16 +145,16 @@
  <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 </div>
 
-<div class="form-group">
+<div class="form-group"><!--campo de texto para ingresar el valor del dinero -->
 <h5><b>Valor</b></h5>
 <!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
 <div class="input-group" >
   
-   <div class="input-group-addon" >
+   <div class="input-group-addon" ><!--campo de texto para el valor -->
 	<span class="glyphicon glyphicon-usd"></span> 
    </div>
   
-   
+   <!--llama al metodo onkeypress funcion solo numeros  -->
    <input type="number" min="0.00" step="0.05"  name="valor_gastos" value="0.00" id="valor_gastos" onkeypress="return isNumberKey(event)" class="valor form-control input-sm" placeholder="ingrese un valor.">    
              
               </div>  
@@ -169,7 +177,7 @@
       </div>
       <div class="panel-body">
    
-<table class="table">
+<table class="table"><!--metodo para declarar una tabla # tabla gastos # -->
   <thead>
     <tr>
       <th width="7%">#</th>
@@ -196,7 +204,7 @@ $sql = "SELECT * from gastos g ";
 
 $num=0;
 //for ($i=2; $i<count($archivos); $i++)
-while( $record = mysqli_fetch_assoc($result) ) 
+while( $record = mysqli_fetch_assoc($result) ) // obtengo el resultado de la consulta y con el while recorro 
 
 {$num++;
 ?>
@@ -230,7 +238,7 @@ while( $record = mysqli_fetch_assoc($result) )
   </div>
 </div>
 
-<!-- jQuery library -->
+<!-- librerias de jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

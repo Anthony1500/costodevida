@@ -3,7 +3,7 @@ header( $header, $replace, $http_response_code );
 $response = array( 
     'status' => 0, 
     'msg' =>  '  Se produjeron algunos problemas. Inténtalo de nuevo.'); 
-    $id=$_GET['id'];
+    $id=$_GET['id'];// obtengo el id seleccionado a eliminar 
     $serverName = "localhost";
     $username = "root";
     $password = "";
@@ -22,6 +22,6 @@ $response = array(
             echo json_encode($response); 
 
 
-            header("Location: index.php");
+            header("Location: index.php");// aqui redirecciona a la pantalla index 
 exit();
             ?>

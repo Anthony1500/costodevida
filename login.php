@@ -74,7 +74,7 @@
 
      $mensaje=" ";
 
-       if( isset($_POST["txtusuario"]) &&  isset($_POST["txtpassword"])   )
+       if( isset($_POST["txtusuario"]) &&  isset($_POST["txtpassword"])   )// compeuebo si hay datos y si tengo la caja de texto llena 
         {
             $txtusuario =   $_POST['txtusuario'];
             $txtpassword =   $_POST['txtpassword']; 
