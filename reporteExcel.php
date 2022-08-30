@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $serverName = "localhost";
 $username = "root";
 $password = "";
@@ -124,7 +125,7 @@ $objPHPExcel->getActiveSheet()->setSharedStyle($estiloInformacion, "G7:J".$fila)
 	
 	$filaGrafica = $fila+2;
 	// definir origen de los valores
-	$values = new PHPExcel_Chart_DataSeriesValues('Number', 'reporte!$G$7:$G$'.$fila);
+	$values = new PHPExcel_Chart_DataSeriesValues('Number', 'reporte!$I$7:$I$'.$fila);
 	
 	// definir origen de los rotulos
 	$categories = new PHPExcel_Chart_DataSeriesValues('String', 'Gastos!$H$7:$H$'.$fila);
@@ -141,7 +142,7 @@ getHeaders();
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
 header("Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
 	header('Content-Disposition: attachment;filename="Gastos.xlsx"');
-
+	header('Cache-Control: max-age=0');
 	ob_end_clean();
 	$objWriter->save('php://output');
 

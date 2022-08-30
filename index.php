@@ -185,6 +185,7 @@
       <th width="10%" style="text-align: center;">Fecha</th>
       <th width="10%" style="text-align: center;">Valor</th>
       
+      
     </tr>
   </thead>
   <tbody>

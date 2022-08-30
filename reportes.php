@@ -197,11 +197,6 @@ if (isset($_GET["fechainicial"]) && isset($_GET["fechafinal"])) {
 
 
 
-
-    
-    
-
-
 $num=0;
 
 //for ($i=2; $i<count($archivos); $i++)
