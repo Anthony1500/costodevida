@@ -4,7 +4,8 @@ $(document).ready(function() {
 	$('.date').datepicker({
 		todayHighlight: true, // to highlight the today's date
 	   	format: 'yyyy-mm-dd', // we format the date before we will submit it to the server side
-	   	autoclose: true //we enable autoclose so that once we click the date it will automatically close the datepicker
+	   	autoclose: true, //we enable autoclose so that once we click the date it will automatically close the datepicker
+		   language: 'en'
 	}); 
 
 	

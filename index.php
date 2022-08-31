@@ -17,6 +17,8 @@
     <!-- Bootstra Datepicker CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
     
+
+
     <script type="text/javascript"> 
         function GetDateTime() {// obtiene la fecha actual y carga a campo de texto
             var currentTime = new Date()
@@ -53,7 +55,7 @@
         window.location.href='login.php';
     
 	}
-
+  
     </script>
     
 <style>
@@ -248,6 +250,8 @@ while( $record = mysqli_fetch_assoc($result) ) // obtengo el resultado de la con
     <!-- Bootstrap Datepicker JS -->
     <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     <!-- Page Script -->
+    <script  src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script  src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
     <script src="assets/js/scripts.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 </body>

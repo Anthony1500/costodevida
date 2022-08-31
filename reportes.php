@@ -287,6 +287,8 @@ $record = mysqli_fetch_assoc($result)
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Bootstrap Datepicker JS -->
     <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script  src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script  src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
     <!-- Page Script -->
     <script src="assets/js/scripts.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
